@@ -36,7 +36,18 @@ const MediaUploader: React.FC<MediaUploaderProps> = ({ onFileSelected }) => {
 			"image/gif",
 			"image/webp",
 		];
-		const validVideoTypes = ["video/mp4", "video/webm", "video/quicktime"];
+		const validVideoTypes = [
+			"video/mp4",
+			"video/webm",
+			"video/quicktime",
+			"video/x-matroska", // MKV
+			"video/x-msvideo", // AVI
+			"video/x-ms-wmv", // WMV
+			"video/3gpp", // 3GP
+			"video/x-flv", // FLV
+			"video/ogg", // OGV
+			"video/mpeg", // MPEG
+		];
 		const validTypes = [...validImageTypes, ...validVideoTypes];
 
 		if (!validTypes.includes(file.type)) {
@@ -90,6 +101,10 @@ const MediaUploader: React.FC<MediaUploaderProps> = ({ onFileSelected }) => {
 					<span>Video</span>
 				</Button>
 			</div>
+
+			<p className="text-xs text-muted-foreground text-center">
+				Max file size: 100MB
+			</p>
 
 			<input
 				type="file"
