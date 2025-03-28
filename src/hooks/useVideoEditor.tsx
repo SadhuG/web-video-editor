@@ -376,7 +376,7 @@ export function useVideoEditor() {
 		return () => {
 			cleanupCanvas();
 		};
-	}, []);
+	});
 
 	return {
 		canvas,
