@@ -2,6 +2,8 @@
 
 A browser-based video editing tool built with Next.js, TypeScript, and Fabric.js that allows users to create and edit videos directly in their web browser.
 
+Live Deploy: [Vercel Link](https://web-video-editor-nine.vercel.app/)
+
 ## Features
 
 - Upload and manage media files (images, videos)
